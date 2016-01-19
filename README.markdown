@@ -1,6 +1,5 @@
-#### :cinema::speech_balloon: srtcli 
+#### :cinema::speech_balloon: srtcli [![Build Status](https://travis-ci.org/stpettersens/srtcli.png?branch=master)](https://travis-ci.org/stpettersens/srtcli)
 > Utility to playback subtitles on the command line.
-[![Build Status](https://travis-ci.org/stpettersens/srtcli.png?branch=master)](https://travis-ci.org/stpettersens/srtcli)
 
 Usage: 
 
