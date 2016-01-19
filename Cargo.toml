@@ -1,0 +1,10 @@
+[package]
+name = "srtcli"
+version = "1.0.0"
+authors = ["Sam Saint-Pettersen <s.stpettersen+github@gmail.com>"]
+
+[dependencies]
+stopwatch = "0.0.6"
+clock = { git = "https://github.com/stpettersens/rust-clock.git" }
+clioptions = { git = "https://github.com/stpettersens/clioptions.git" }
+regex = "0.1"
