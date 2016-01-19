@@ -1,3 +1,4 @@
+/* Part of srtcli */
 use std::fmt;
 
 pub struct Subtitle {
