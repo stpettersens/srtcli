@@ -50,7 +50,16 @@ fn convert_time_to_ms(timestamp: &str) -> i64 {
     t
 }
 
-fn parse_subtitles(input: &str) -> Vec<Subtitle> {
+fn is_valid(data: &str) -> bool {
+    let mut valid = false;
+    let p = Regex::new(r"^\d+$").unwrap();
+    if p.is_match(&data) {
+        valid = true
+    }
+    valid
+}
+
+fn parse_subtitles(program: &str, input: &str) -> Vec<Subtitle> {
     let f = File::open(input).unwrap();
     let file = BufReader::new(&f);
     let mut lines: Vec<String> = Vec::new();
@@ -59,6 +68,9 @@ fn parse_subtitles(input: &str) -> Vec<Subtitle> {
         if !l.is_empty() {
             lines.push(l);
         }
+    }
+    if !is_valid(&lines[0]) {
+        display_error(&program, "Input file is not valid subtitles");
     }
 
     let mut seqs: Vec<i64> = Vec::new();
@@ -106,8 +118,8 @@ fn parse_subtitles(input: &str) -> Vec<Subtitle> {
     subtitles
 }
 
-fn playback_subtitles(input: &str, use_clock: bool) {
-    let subtitles: Vec<Subtitle> = parse_subtitles(&input);
+fn playback_subtitles(program: &str, input: &str, use_clock: bool) {
+    let subtitles: Vec<Subtitle> = parse_subtitles(&program, &input);
     let runtime = subtitles[subtitles.len() - 1].get_end();
     let mut clock = Clock::new();
     clock.set_time_ms(runtime);
@@ -184,7 +196,7 @@ fn main() {
             display_error(&program, "No subtitle file specified");
         }
 
-        playback_subtitles(&input, use_clock);
+        playback_subtitles(&program, &input, use_clock);
     }
     else {
         display_error(&program, "No options specified");
