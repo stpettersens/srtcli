@@ -1,7 +1,7 @@
 #### :speech_balloon: srtcli
 > Utility to playback subtitles on the command line.
 
-##### Usage: 
+Usage: 
 
 ```
 srtcli -f|--file <file.srt> -c|--clock [-h|--help]
