@@ -1,4 +1,4 @@
-#### :speech_balloon: srtcli
+#### :cinema::speech_balloon: srtcli
 > Utility to playback subtitles on the command line.
 
 Usage: 
