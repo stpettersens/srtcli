@@ -54,7 +54,7 @@ fn is_valid(data: &str) -> bool {
     let mut valid = false;
     let p = Regex::new(r"^\d+$").unwrap();
     if p.is_match(&data) {
-        valid = true
+        valid = true;
     }
     valid
 }
