@@ -37,17 +37,17 @@ fn clear_text(lines: u32) {
 }
 
 fn convert_time_to_ms(timestamp: &str) -> i64 {
-    let mut t: i64 = 0;
+    let mut time: i64 = 0;
     let p = Regex::new(r"(\d{2}):(\d{2}):(\d{2}),(\d{3})").unwrap();
     for cap in p.captures_iter(&timestamp) {
         let hours = parse_unit(&cap.at(1).unwrap());
         let minutes = parse_unit(&cap.at(2).unwrap());
         let seconds = parse_unit(&cap.at(3).unwrap());
         let ms = parse_unit(&cap.at(4).unwrap());
-        t = (hours * 3600) + (minutes * 60) + seconds;
-        t = (t * 1000) + ms;
+        time = (hours * 3600) + (minutes * 60) + seconds;
+        time = (time * 1000) + ms;
     }
-    t
+    time
 }
 
 fn is_valid(data: &str) -> bool {
