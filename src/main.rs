@@ -159,6 +159,11 @@ fn playback_subtitles(program: &str, input: &str, use_clock: bool) {
     exit(0);
 }
 
+fn display_version() {
+    println!("srtcli v. 1.0");
+    exit(0);
+}
+
 fn display_usage(program: &str, exit_code: i32) {
     println!("\nsrtcli");
     println!("Utility to playback subtitles on the command line.");
@@ -168,6 +173,7 @@ fn display_usage(program: &str, exit_code: i32) {
     println!("\n-f|--file: Subtitle file (SubRip Text) to playback.");
     println!("-c|--clock: Display a playback clock.");
     println!("-h|--help: Display this help information and exit.");
+    println!("-v|--version: Display version information and exit.");
     exit(exit_code);
 }
 
@@ -186,6 +192,7 @@ fn main() {
         for (i, a) in cli.get_args().iter().enumerate() {
             match a.trim() {
                 "-h" | "--help" => display_usage(&program, 0),
+                "-v" | "--version" => display_version(),
                 "-f" | "--file" => input = cli.next_argument(i),
                 "-c" | "--clock" => use_clock = true,
                 _ => continue,
