@@ -169,7 +169,7 @@ fn display_usage(program: &str, exit_code: i32) {
     println!("Utility to playback subtitles on the command line.");
     println!("\nCopyright 2016 Sam Saint-Pettersen.");
     println!("Released under the MIT/X11 License.");
-    println!("\nUsage {} -f|--file <file.srt> -c|--clock [-h|--help]", program);
+    println!("\nUsage {} -f|--file <file.srt> -c|--clock [-h|--help][-v|--version]", program);
     println!("\n-f|--file: Subtitle file (SubRip Text) to playback.");
     println!("-c|--clock: Display a playback clock.");
     println!("-h|--help: Display this help information and exit.");
