@@ -9,6 +9,6 @@ license = "MIT"
 
 [dependencies]
 stopwatch = "0.0.6"
-rust-clock = { git = "https://github.com/stpettersens/rust-clock.git" }
+rust-clock = "0.1.0"
 clioptions = "0.1.0"
 regex = "0.1.77"

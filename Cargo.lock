@@ -4,7 +4,7 @@ version = "1.0.0"
 dependencies = [
  "clioptions 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "regex 0.1.77 (registry+https://github.com/rust-lang/crates.io-index)",
- "rust-clock 0.1.0 (git+https://github.com/stpettersens/rust-clock.git)",
+ "rust-clock 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "stopwatch 0.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -137,7 +137,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "rust-clock"
 version = "0.1.0"
-source = "git+https://github.com/stpettersens/rust-clock.git#27ff922c9007ba406715de69e771a5e4b3d77471"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "rustc-serialize"
@@ -211,7 +211,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum rand 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)" = "2791d88c6defac799c3f20d74f094ca33b9332612d9aef9078519c82e4fe04a5"
 "checksum regex 0.1.77 (registry+https://github.com/rust-lang/crates.io-index)" = "64b03446c466d35b42f2a8b203c8e03ed8b91c0f17b56e1f84f7210a257aa665"
 "checksum regex-syntax 0.3.7 (registry+https://github.com/rust-lang/crates.io-index)" = "48f0573bcee95a48da786f8823465b5f2a1fae288a55407aca991e5b3e0eae11"
-"checksum rust-clock 0.1.0 (git+https://github.com/stpettersens/rust-clock.git)" = "<none>"
+"checksum rust-clock 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d0bcd86495988d3d245d701dc68ce9b10c2b98c0732049f53f55da3c8643297c"
 "checksum rustc-serialize 0.3.19 (registry+https://github.com/rust-lang/crates.io-index)" = "6159e4e6e559c81bd706afe9c8fd68f547d3e851ce12e76b1de7914bab61691b"
 "checksum stopwatch 0.0.6 (registry+https://github.com/rust-lang/crates.io-index)" = "7dea8aedf61aa281d90072ff3e9833ea441f653064b625e476fcb1a84a5de277"
 "checksum thread-id 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a9539db560102d1cef46b8b78ce737ff0bb64e7e18d35b2a5688f7d097d0ff03"
