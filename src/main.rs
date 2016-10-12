@@ -8,12 +8,12 @@
 
 mod subtitle;
 extern crate stopwatch;
-extern crate clock;
+extern crate rust_clock;
 extern crate clioptions;
 extern crate regex;
 use subtitle::Subtitle;
 use stopwatch::Stopwatch;
-use clock::Clock;
+use rust_clock::Clock;
 use clioptions::CliOptions;
 use regex::Regex;
 use std::io::{BufRead, BufReader};
