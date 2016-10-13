@@ -140,7 +140,7 @@ fn playback_subtitles(program: &str, input: &str, use_clock: bool) {
             clear_text(40);
             println!("{}", clock.get_time());
         }
-        
+
         if time == subtitles[i].get_start() {
             clear_text(50);
             in_subtitle = true;
@@ -169,7 +169,7 @@ fn display_usage(program: &str, exit_code: i32) {
     println!("Utility to playback subtitles on the command line.");
     println!("\nCopyright 2016 Sam Saint-Pettersen.");
     println!("Released under the MIT/X11 License.");
-    println!("\nUsage {} -f|--file <file.srt> -c|--clock [-h|--help][-v|--version]", program);
+    println!("\nUsage: {} -f|--file <file.srt> -c|--clock [-h|--help][-v|--version]", program);
     println!("\n-f|--file: Subtitle file (SubRip Text) to playback.");
     println!("-c|--clock: Display a playback clock.");
     println!("-h|--help: Display this help information and exit.");
